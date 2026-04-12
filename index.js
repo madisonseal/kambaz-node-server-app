@@ -1,13 +1,22 @@
-import express from 'express';
-import Hello from './Hello.js';
-import Lab5 from './Lab5/index.js';
+import "dotenv/config";
+import express from "express";
+import mongoose from "mongoose";
 import cors from "cors";
+import session from "express-session";
+import Hello from "./Hello.js";
+import Lab5 from "./Lab5/index.js";
 import db from "./kambaz/databases/index.js";
 import UserRoutes from "./kambaz/users/routes.js";
 import CourseRoutes from "./kambaz/courses/routes.js";
 import AssignmentRoutes from "./kambaz/assignments/routes.js";
-import "dotenv/config";
-import session from "express-session";
+
+
+
+const CONNECTION_STRING = process.env.DATABASE_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kambaz"
+
+mongoose.connect(CONNECTION_STRING)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.log("MongoDB connection error:", err));
 
 const app = express();
 app.use(
@@ -34,7 +43,7 @@ app.use(
 app.use(express.json());
 UserRoutes(app, db);
 CourseRoutes(app, db);
-AssignmentRoutes(app, db);
+AssignmentRoutes(app);
 Lab5(app);
 Hello(app);
 app.use(express.json());
