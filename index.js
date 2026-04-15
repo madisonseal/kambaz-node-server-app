@@ -6,6 +6,7 @@ import db from "./kambaz/databases/index.js";
 import UserRoutes from "./kambaz/users/routes.js";
 import CourseRoutes from "./kambaz/courses/routes.js";
 import AssignmentRoutes from "./kambaz/assignments/routes.js";
+import ModulesRoutes from './kambaz/modules/routes.js';
 import "dotenv/config";
 import session from "express-session";
 
@@ -35,6 +36,7 @@ app.use(express.json());
 UserRoutes(app, db);
 CourseRoutes(app, db);
 AssignmentRoutes(app, db);
+ModulesRoutes(app, db)
 Lab5(app);
 Hello(app);
 app.use(express.json());
