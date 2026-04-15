@@ -36,7 +36,7 @@ app.use(
     sessionOptions.cookie = {
       sameSite: "none",
       secure: true,
-      domain: process.env.SERVER_URL,
+     //  domain: process.env.SERVER_URL,
     };
   }
   app.use(session(sessionOptions));
