@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/* import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
     _id: String,
     username: { type: String, required: true, unique: true },
@@ -19,4 +19,4 @@ const userSchema = new mongoose.Schema({
   },
   { collection: "users" }
 );
-export default userSchema;
+export default userSchema; */

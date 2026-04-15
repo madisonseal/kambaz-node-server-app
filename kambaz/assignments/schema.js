@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const assignmentSchema = new mongoose.Schema(
+/* const assignmentSchema = new mongoose.Schema(
   {
     _id: String,
     title: String,
@@ -14,4 +14,4 @@ const assignmentSchema = new mongoose.Schema(
   { collection: "assignments" }
 );
 
-export default assignmentSchema;
+export default assignmentSchema; */

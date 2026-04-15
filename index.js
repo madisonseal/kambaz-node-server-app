@@ -1,6 +1,6 @@
 import "dotenv/config";
 import express from "express";
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 import cors from "cors";
 import session from "express-session";
 import Hello from "./Hello.js";
@@ -14,16 +14,15 @@ import AssignmentRoutes from "./kambaz/assignments/routes.js";
 
 const CONNECTION_STRING = process.env.DATABASE_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kambaz"
 
-mongoose.connect(CONNECTION_STRING)
+/* mongoose.connect(CONNECTION_STRING)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("MongoDB connection error:", err));
-
+*/
 const app = express();
 app.use(
     cors({
       credentials: true,
-      origin: true, 
-      // origin: process.env.CLIENT_URL || "http://localhost:3000",
+      origin: process.env.CLIENT_URL || "http://localhost:3000",
     })
    ); 
    const sessionOptions = {

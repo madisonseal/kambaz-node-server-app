@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/* import mongoose from "mongoose";
 import moduleSchema from "../modules/schema.js"
 const courseSchema = new mongoose.Schema({
    _id: String,
@@ -10,4 +10,4 @@ const courseSchema = new mongoose.Schema({
  },
  { collection: "courses" }
 );
-export default courseSchema;
+export default courseSchema; */

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/* import mongoose from "mongoose";
 const enrollmentSchema = new mongoose.Schema(
  {
    _id: String,
@@ -15,4 +15,4 @@ const enrollmentSchema = new mongoose.Schema(
  },
  { collection: "enrollments" }
 );
-export default enrollmentSchema;
+export default enrollmentSchema; */

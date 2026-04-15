@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/* import mongoose from "mongoose";
 const schema = new mongoose.Schema(
   {
     _id: String,
@@ -7,4 +7,4 @@ const schema = new mongoose.Schema(
     lessons: [{ _id: String, name: String, description: String }],
   }
 );
-export default schema;
+export default schema; */
