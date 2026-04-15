@@ -39,7 +39,7 @@ export default function CourseRoutes(app, db) {
   }
   app.delete("/api/courses/:courseId", deleteCourse);
 
-  const findModulesForCourse = (req, res) => {
+const findModulesForCourse = (req, res) => {
     const { courseId } = req.params;
     const modules = db.modules.filter((m) => m.course === courseId);
     res.json(modules);

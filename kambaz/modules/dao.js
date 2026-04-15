@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 export default function ModulesDao(db) {
 
     function updateModule(moduleId, moduleUpdates) {
@@ -26,6 +27,9 @@ export default function ModulesDao(db) {
     }
     return {
       findModulesForCourse,
+      createModule,
+      deleteModule, 
+      updateModule
     };
    }
    
