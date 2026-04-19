@@ -1,7 +1,7 @@
 import UsersDao from "./dao.js";
 
-export default function UserRoutes(app, db) {
-  const dao = UsersDao(db);
+export default function UserRoutes(app) {
+  const dao = UsersDao();
 
   const signin = async (req, res) => {
     const { username, password } = req.body;
