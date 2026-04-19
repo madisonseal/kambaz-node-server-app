@@ -35,7 +35,7 @@ app.use(
     sessionOptions.cookie = {
       sameSite: "none",
       secure: true,
-      domain: process.env.SERVER_URL,
+     // domain: process.env.SERVER_URL,
     };
   }
   app.use(session(sessionOptions));
@@ -46,5 +46,4 @@ CourseRoutes(app, db);
 AssignmentRoutes(app);
 Lab5(app);
 Hello(app);
-app.use(express.json());
 app.listen(process.env.PORT || 4000);
